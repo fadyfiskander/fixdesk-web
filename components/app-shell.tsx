@@ -10,6 +10,7 @@ import {
   Package,
   Settings,
   Smartphone,
+  Tag,
   Users,
   Wrench,
 } from "lucide-react"
@@ -32,6 +33,7 @@ import {
 type Language = "en" | "ar"
 type NavKey =
   | "categories"
+  | "brands"
   | "products"
   | "customers"
   | "technicians"
@@ -46,6 +48,7 @@ const navItems: {
   labelKey: NavKey
 }[] = [
   { url: "/", icon: Home, labelKey: "categories" },
+  { url: "/brands", icon: Tag, labelKey: "brands" },
   { url: "/customers", icon: Users, labelKey: "customers" },
   { url: "/technicians", icon: Wrench, labelKey: "technicians" },
   { url: "/devices", icon: Smartphone, labelKey: "devices" },
@@ -76,6 +79,7 @@ const translations = {
     productsCount: "248",
     nav: {
       categories: "Categories",
+      brands: "Brands",
       products: "Products",
       customers: "Customers",
       technicians: "Technicians",
@@ -94,6 +98,7 @@ const translations = {
     productsCount: "٢٤٨",
     nav: {
       categories: "الفئات",
+      brands: "الماركات",
       products: "المنتجات",
       customers: "العملاء",
       technicians: "الفنيون",
