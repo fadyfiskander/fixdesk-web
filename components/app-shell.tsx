@@ -11,6 +11,7 @@ import {
   Settings,
   Smartphone,
   Users,
+  Wrench,
 } from "lucide-react"
 
 import {
@@ -29,7 +30,13 @@ import {
 } from "@/components/ui/sidebar"
 
 type Language = "en" | "ar"
-type NavKey = "categories" | "products" | "customers" | "devices" | "settings"
+type NavKey =
+  | "categories"
+  | "products"
+  | "customers"
+  | "technicians"
+  | "devices"
+  | "settings"
 
 const languageStorageKey = "fixDesk-language"
 
@@ -40,6 +47,7 @@ const navItems: {
 }[] = [
   { url: "/", icon: Home, labelKey: "categories" },
   { url: "/customers", icon: Users, labelKey: "customers" },
+  { url: "/technicians", icon: Wrench, labelKey: "technicians" },
   { url: "/devices", icon: Smartphone, labelKey: "devices" },
   { url: "/settings", icon: Settings, labelKey: "settings" },
 ]
@@ -70,6 +78,7 @@ const translations = {
       categories: "Categories",
       products: "Products",
       customers: "Customers",
+      technicians: "Technicians",
       devices: "Devices",
       settings: "Settings",
     },
@@ -87,6 +96,7 @@ const translations = {
       categories: "الفئات",
       products: "المنتجات",
       customers: "العملاء",
+      technicians: "الفنيون",
       devices: "الأجهزة",
       settings: "الإعدادات",
     },
